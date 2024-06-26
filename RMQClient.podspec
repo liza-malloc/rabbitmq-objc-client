@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RMQClient"
-  s.version          = "0.12.0"
+  s.version          = "0.13.1"
   s.summary          = "RabbitMQ client"
   s.description      = <<-DESC
   RabbitMQ client for Objective-C and Swift. Developed and supported by the
@@ -18,7 +18,11 @@ Pod::Spec.new do |s|
   s.dependency       "JKVValue", "~> 1.3"
   s.dependency       "CocoaAsyncSocket", "~> 7.6"
 
-  s.info_plist = {
-    'CFBundleIdentifier' => 'io.pivotal.RMQClient'
+  # s.info_plist = {
+  #   'CFBundleIdentifier' => 'io.pivotal.RMQClient'
+  # }
+  s.pod_target_xcconfig = {
+    'PRODUCT_BUNDLE_IDENTIFIER' => 'io.pivotal.RMQClient'
   }
+
 end
